@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    color: rgb(58, 80, 133);
+    font-family: 'Montserrat', 'Arial', sans-serif; 
+    letter-spacing: 1px; 
+}
+video{
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}   
+.container{
+    padding: 2%;
+}
+
+/*SEKCJA HEADER*/
+.pageHeader{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 20vh;
+    border-radius: 20px;
+    box-shadow: -4px 4px 10px;
+    padding-left: 1%;
+    display: flex; 
+    align-items: center;
+}
+img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 20px;
+    margin: 2%;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;    
+    gap: 5px;               
+}
+button{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 10px;
+    border-color: white;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(58, 80, 133);
+    color: white !important;
+}   
+h1{
+    margin-left: 19%;
+}
+.dateHourContainer{ 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+    margin-right: 2%;    
+}
+.dateHourContainer select {
+    font-size: 1vw;
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(58, 80, 133, 0.4);
+    background-color: rgba(255,255,255,0.8);
+    cursor: pointer;
+}
+.dateHourContainer select:hover {
+    background-color: rgba(255,255,255,1);
+}
+#hour {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    letter-spacing: 2px;      
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/*SEKCJA MAIN*/
+.pageMain{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    height: 60vh;
+    border-radius: 20px;
+    box-shadow: -4px 4px 10px ;
+    margin-left: 10%;
+    margin-top: 2%;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "cityHeader cityHeader"
+    "tempSection infSection" 
+    "cloudSection sunPhaseSection"
+}
+
+.tempSection,
+.infSection,
+#cloudSection,
+.sunPhaseSection{
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.cityHeader{
+    grid-area: cityHeader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cityInput{
+    width: 40%;
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(58, 80, 133, 0.3);
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: 0.2s ease;
+}
+#cityInput:focus{
+    border: 1px solid #1e90ff;
+    box-shadow: 0 0 8px rgba(30,144,255,0.4);
+}
+#cityButton{
+    width: 10%;
+    margin-left: 1%;
+}
+
+.tempSection{
+    grid-area: tempSection;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+#mainTemp, p{
+    font-size: 4rem;   
+    font-weight: 700;
+    line-height: 1;
+}
+#feelsLike{
+    font-size: 0.9rem; 
+    margin-top: 8px;
+    color: #555;
+}
+
+.infSection{
+    grid-area: infSection;
+}
+ul, li{
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+#cloudSection{
+    grid-area: cloudSection;
+    font-weight: bold;
+    font-size: 2vw;
+    text-align: center;
+}
+
+.sunPhaseSection{
+    grid-area: sunPhaseSection;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+    display: flex;   
+    flex-direction: column; 
+    align-items: center;
+}
+small{
+    font-size: 7px;
+}
+
+/*tryb ciemny*/
+#darkPageHeader, #darkPageMain{
+    background-color: rgb(10, 24, 47);
+    box-shadow: 0 4px 10px rgba(72, 127, 183, 0.4);
+}
+.darkButton{
+    background-color: rgb(8, 25, 53);
+    border-color: rgb(10, 24, 47);
+}
+.darkButton:hover{
+    background-color: white;
+    color: rgb(58, 80, 133) !important;
+}

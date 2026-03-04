@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+}
+video{
+    position: fixed;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}   
+.container{
+    padding: 2%;
+}
+
+/*SEKCJA HEADER*/
+.pageHeader{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 20vh;
+    border-radius: 20px;
+    box-shadow: -4px 4px 10px;
+    padding-left: 1%;
+    display: flex; 
+    align-items: center;
+}
+img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 20px;
+    margin: 2%;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;    
+    gap: 5px;               
+}
+button{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 10px;
+    border-color: white;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}   
+h1{
+    margin-left: 25%;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(58, 80, 133);
+    -webkit-text-stroke: 1px #000;
+}
+.dateHourContainer{ 
+    gap: 5px;     
+    margin-left: auto;  
+    margin-right: 2%;     
+}
+button{
+    width: 2vw;
+    height: 2vw;
+    border-radius: 10px;
+    border-color: white;
+}
+.dateHourContainer select {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(58, 80, 133, 0.4);
+    background-color: rgba(255,255,255,0.8);
+    color: rgb(58, 80, 133);
+    cursor: pointer;
+    outline: none;
+}
+.dateHourContainer select:hover {
+    background-color: rgba(255,255,255,1);
+}
+.hour {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    color: rgb(58, 80, 133);
+    letter-spacing: 2px;          /* lekki odstęp między cyframi */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/*SEKCJA MAIN*/
+.pageMain{
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 80%;
+    height: 60vh;
+    border-radius: 20px;
+    box-shadow: -4px 4px 10px ;
+    margin-left: 10%;
+    margin-top: 2%;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-areas:
+    "cityHeader cityHeader"
+    "tempSection infSection" 
+    "cloudSection Section"
+}
+
+.tempSection,
+.infSection,
+.cloudSection,
+.Section{
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cityHeader{
+    grid-area: cityHeader;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cityInput{
+    width: 60%;
+    padding: 12px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(58, 80, 133, 0.3);
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    transition: 0.2s ease;
+}
+#cityInput:focus{
+    border: 1px solid #1e90ff;
+    box-shadow: 0 0 8px rgba(30,144,255,0.4);
+}
+
+.tempSection{
+    grid-area: tempSection;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.mainTemp{
+    font-size: 4rem;   
+    font-weight: 700;
+    color: rgb(58, 80, 133);
+    line-height: 1;
+}
+.feelsLike{
+    font-size: 0.9rem; 
+    margin-top: 8px;
+    color: #555;
+}
+
+.infSection{
+    grid-area: infSection;
+}
+ul{
+    list-style-type: none   ;
+}
+
+.cloudSection{
+    grid-area: cloudSection;
+}
+.Section{
+    grid-area: Section;
+}

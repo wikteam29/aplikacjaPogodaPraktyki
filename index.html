@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img vid/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Pogoda ventus</title>
+</head>
+<body>
+    <video autoplay muted loop id="bg-video">
+        <source src="img vid/skyBG.mp4" type="video/mp4">
+    </video>
+
+    <div class="container">
+        <header class="pageHeader">
+            <img src="img vid/favicon.ico" alt="logo aplikacji">
+            <div class="buttonContainer">
+                <button id="unitSwitch"></button>
+                <button id="BDswitch"></button> 
+            </div>
+            <h1>Sprawdź pogodę w 5 sekund</h1>
+            <div class="dateHourContainer">
+                <select id="date"></select>
+                <p id="hour">&nbsp12:59</p>
+            </div>
+            <script>
+                
+            </script>
+        </header>
+
+        <main class="pageMain"> 
+            <header class="cityHeader"> 
+                <input id="cityInput" value="Łódź"> 
+                <button id="cityButton">Wyszukaj</button>
+            </header> 
+
+            <section class="tempSection">
+                <ul>
+                    <div id="mainTemp"></div>
+                    <div id="feelsLike"></div>
+                </ul>
+            </section> 
+
+            <section class="infSection"> 
+                <ul>
+                    <li id="humidity">💧 Wilgotność: 70%</li>
+                    <li id="pressure">🌡 Ciśnienie: 1013 hPa</li>
+                    <li id="wind">💨 Wiatr: 12 km/h</li>
+                </ul>
+            </section> 
+
+            <section id="cloudSection"></section> 
+
+            <section class="sunPhaseSection"></section> 
+        </main>
+        
+    </div>
+</body>
+</html>
