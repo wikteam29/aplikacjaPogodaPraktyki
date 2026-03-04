@@ -31,7 +31,7 @@
 
         <main class="pageMain"> 
             <header class="cityHeader"> 
-                <input id="cityInput" value="Łódź"> 
+                <input id="cityInput"> 
                 <button id="cityButton" onclick="city()">Wyszukaj</button>
             </header> 
 
@@ -55,6 +55,12 @@
             <section class="sunPhaseSection"></section> 
         </main>
         <script>
+                //skrypt dla zapisywania ostatnio wybranej jednostki
+                if(!localStorage.getItem("lastCity")){
+                    localStorage.setItem("lastCity","Łódź")
+                }
+                document.getElementById("cityInput").value = localStorage.getItem("lastCity");
+
                 //skrypt dla zapisywania ostatnio wybranej jednostki
                 if(!localStorage.getItem("lastUnit")){
                     localStorage.setItem("lastUnit","°C")
@@ -203,6 +209,7 @@
                 //skrypt dla miasta
                 function city(){
                     let city = document.getElementById("cityInput").value;
+                    localStorage.setItem("lastCity", city);
                     pogoda(city);
                 }
 
